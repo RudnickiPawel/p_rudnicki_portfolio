@@ -3,7 +3,9 @@ import '../../styles/main.sass';
 const Header = (props) => {
   return (
     <div className='Header'>
-      header
+      hamburger
+      menu
+      hide-button
     </div>
   );
 };
