@@ -1,9 +1,28 @@
 .Hamburger
-  height: 50px
+  padding: 20px
+  height: 30px
   width: 50px
-  background-color: red
-  &__line1
-  &__line2
-  &__line3
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &-x
+    .Hamburger__line1
+      position: relative
+      top: 12px
+      transform: rotate(45deg)
+    .Hamburger__line2
+      opacity: 0
+    .Hamburger__line3
+      transform: rotate(-45deg)
+      position: relative
+      bottom: 13px
+
+  // &__line1
+  // &__line2
+  // &__line3
   &__line1, &__line2, &__line3
+    height: 5px
     pointer-events: none
+    background-color: red
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out

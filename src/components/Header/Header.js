@@ -10,7 +10,7 @@ const Header = (props) => {
   };
   return (
     <div className='Header'>
-      <Hamburger clicked={toggleMenuHandler}/>
+      <Hamburger clicked={toggleMenuHandler} isMenuOn={toggleMenu}/>
       {toggleMenu ? <Menu /> : null}
     </div>
   );
