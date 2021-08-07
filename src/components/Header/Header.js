@@ -1,11 +1,17 @@
 import '../../styles/main.sass';
+import Hamburger from './Hamburger/Hamburger';
+import Menu from './Menu/Menu';
+import { useState } from 'react';
 
 const Header = (props) => {
+  const [toggleMenu, setToggleMenu] = useState(0);
+  const toggleMenuHandler = () => {
+    setToggleMenu(prevToggleMenu => !prevToggleMenu)
+  };
   return (
     <div className='Header'>
-      hamburger
-      menu
-      hide-button
+      <Hamburger clicked={toggleMenuHandler}/>
+      {toggleMenu ? <Menu /> : null}
     </div>
   );
 };
