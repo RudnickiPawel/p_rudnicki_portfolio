@@ -9,7 +9,7 @@ const Header = (props) => {
     setToggleMenu(prevToggleMenu => !prevToggleMenu)
   };
   return (
-    <div className='Header'>
+    <div className={toggleMenu ? 'Header' : 'Header Header--backgroundOff'}  >
       <Hamburger clicked={toggleMenuHandler} isMenuOn={toggleMenu}/>
       {toggleMenu ? <Menu /> : null}
     </div>
