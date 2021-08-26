@@ -4,12 +4,14 @@ import Menu from './Menu/Menu';
 import { useState } from 'react';
 
 const Header = (props) => {
-  const [toggleMenu, setToggleMenu] = useState(1);
+  const isScreenWide = window.screen.width > 768; 
+  // initially show menu on big width, and hide on small
+  const [toggleMenu, setToggleMenu] = useState(isScreenWide ? 1 : 0);
   const toggleMenuHandler = () => {
     setToggleMenu(prevToggleMenu => !prevToggleMenu)
   };
   return (
-    <div className={toggleMenu ? 'Header' : 'Header Header--backgroundOff'}  >
+    <div className='Header'>
       <Hamburger clicked={toggleMenuHandler} isMenuOn={toggleMenu}/>
       {toggleMenu ? <Menu /> : null}
     </div>

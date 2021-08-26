@@ -7,8 +7,13 @@
   display: flex
   flex-direction: column
   justify-content: space-between
-  // border-radius: 19%
-  // background-color: rgba(0, 0, 0, 0.5)
+  &:hover
+    cursor: pointer
+    .Hamburger__line1, .Hamburger__line2, .Hamburger__line3
+      background-color: white
+  @media screen and ( max-width: 400px )
+    margin: 10px
+      
   @media ( min-width: 769px )
     display: none
     position: relative
@@ -33,15 +38,8 @@
       .Hamburger__line1, .Hamburger__line2, .Hamburger__line3
         left: 25%
 
-  // &__line1
-  // &__line2
-  // &__line3
   &__line1, &__line2, &__line3
     position: relative
     height: 5px
     pointer-events: none
-    background-color: black
-    // background-color: rgb(0, 128, 0)
-    // border: 1px solid red
-    // transition: transform .3s ease-in-out, opacity .3s ease-in-out, 
-    transition: 
+    background-color: #f8aa67

@@ -28,8 +28,10 @@ code {
   width: 100%;
 }
 
-.Header--backgroundOff {
-  background-color: transparent;
+@media screen and (max-width: 768px) {
+  .Header {
+    position: fixed;
+  }
 }
 
 .Hamburger {
@@ -48,6 +50,20 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.Hamburger:hover {
+  cursor: pointer;
+}
+
+.Hamburger:hover .Hamburger__line1, .Hamburger:hover .Hamburger__line2, .Hamburger:hover .Hamburger__line3 {
+  background-color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .Hamburger {
+    margin: 10px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -94,7 +110,7 @@ code {
   position: relative;
   height: 5px;
   pointer-events: none;
-  background-color: black;
+  background-color: #f8aa67;
 }
 
 .Menu {
@@ -128,12 +144,17 @@ code {
 
 .Menu__link {
   vertical-align: middle;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
   .Menu__link {
     display: table-cell;
   }
+}
+
+.Menu__link:hover {
+  color: #f8aa67;
 }
 
 .Card {
