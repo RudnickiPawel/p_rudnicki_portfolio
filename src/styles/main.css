@@ -69,7 +69,6 @@ code {
 @media (min-width: 769px) {
   .Hamburger {
     display: none;
-    position: relative;
   }
 }
 
@@ -89,21 +88,6 @@ code {
           transform: rotate(-45deg);
   position: relative;
   bottom: 13px;
-}
-
-@media (min-width: 769px) {
-  .Hamburger-x .Hamburger__line1, .Hamburger-x .Hamburger__line3 {
-    width: 30px;
-  }
-  .Hamburger-x .Hamburger__line1 {
-    top: 3px;
-  }
-  .Hamburger-x .Hamburger__line3 {
-    bottom: 3px;
-  }
-  .Hamburger-x .Hamburger__line1, .Hamburger-x .Hamburger__line2, .Hamburger-x .Hamburger__line3 {
-    left: 25%;
-  }
 }
 
 .Hamburger__line1, .Hamburger__line2, .Hamburger__line3 {
@@ -126,7 +110,7 @@ code {
 
 @media (min-width: 769px) {
   .Menu {
-    padding: 15px 0;
+    padding: 0;
   }
 }
 
@@ -138,6 +122,7 @@ code {
 
 @media (min-width: 769px) {
   .Menu div {
+    font-size: 20px;
     padding: 0;
   }
 }

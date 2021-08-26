@@ -4,7 +4,7 @@ import Menu from './Menu/Menu';
 import { useState } from 'react';
 
 const Header = (props) => {
-  const isScreenWide = window.screen.width > 768; 
+  const isScreenWide = window.innerWidth > 768; 
   // initially show menu on big width, and hide on small
   const [toggleMenu, setToggleMenu] = useState(isScreenWide ? 1 : 0);
   const toggleMenuHandler = () => {
