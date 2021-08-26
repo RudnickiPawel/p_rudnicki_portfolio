@@ -1,0 +1,148 @@
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1920px;
+  background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 5000px;
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+.Header--backgroundOff {
+  background-color: transparent;
+}
+
+.Hamburger {
+  margin: 26px;
+  padding: 4px;
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 769px) {
+  .Hamburger {
+    display: none;
+    position: relative;
+  }
+}
+
+.Hamburger-x .Hamburger__line1 {
+  position: relative;
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.Hamburger-x .Hamburger__line2 {
+  opacity: 0;
+}
+
+.Hamburger-x .Hamburger__line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: relative;
+  bottom: 13px;
+}
+
+@media (min-width: 769px) {
+  .Hamburger-x .Hamburger__line1, .Hamburger-x .Hamburger__line3 {
+    width: 30px;
+  }
+  .Hamburger-x .Hamburger__line1 {
+    top: 3px;
+  }
+  .Hamburger-x .Hamburger__line3 {
+    bottom: 3px;
+  }
+  .Hamburger-x .Hamburger__line1, .Hamburger-x .Hamburger__line2, .Hamburger-x .Hamburger__line3 {
+    left: 25%;
+  }
+}
+
+.Hamburger__line1, .Hamburger__line2, .Hamburger__line3 {
+  position: relative;
+  height: 5px;
+  pointer-events: none;
+  background-color: black;
+}
+
+.Menu {
+  padding: 10% 0 5%;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: table;
+  height: 60px;
+  overflow: hidden;
+  color: white;
+}
+
+@media (min-width: 769px) {
+  .Menu {
+    padding: 15px 0;
+  }
+}
+
+.Menu div {
+  padding: 3% 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (min-width: 769px) {
+  .Menu div {
+    padding: 0;
+  }
+}
+
+.Menu__link {
+  vertical-align: middle;
+}
+
+@media (min-width: 769px) {
+  .Menu__link {
+    display: table-cell;
+  }
+}
+
+.Card {
+  max-width: 1440px;
+  margin: 90px auto 0;
+}
+
+@media (max-width: 1440px) {
+  .Card {
+    margin: 0;
+  }
+}
