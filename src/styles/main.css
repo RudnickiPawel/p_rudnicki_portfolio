@@ -1,9 +1,13 @@
+html {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 body {
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1920px;
   background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -142,13 +146,50 @@ code {
   color: #f8aa67;
 }
 
-.Card {
-  max-width: 1440px;
-  margin: 90px auto 0;
+.Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 90px;
+  color: #fff;
+  border-radius: 2.25rem;
 }
 
-@media (max-width: 1440px) {
-  .Card {
-    margin: 0;
-  }
+.Section--Card {
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 90px auto;
+}
+
+.Section__title {
+  width: 100%;
+  font-size: 80px;
+}
+
+.ProjectCard {
+  max-width: 400px;
+  margin: 90px 0px;
+  padding: 30px;
+  color: inherit;
+  text-decoration: none;
+  text-align: left;
+}
+
+.ProjectCard:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(60deg, #ff7a18, #9E6F49 40%, #fff 65%);
+  -webkit-box-shadow: rgba(0, 0, 37, 0.15) 0px 2px 4px 0px, rgba(248, 170, 103, 0.52) 0px 2px 15px 0px;
+          box-shadow: rgba(0, 0, 37, 0.15) 0px 2px 4px 0px, rgba(248, 170, 103, 0.52) 0px 2px 15px 0px;
+}
+
+.ProjectCard h1 {
+  text-align: center;
+}
+
+.ProjectCard img {
+  width: 100%;
 }
