@@ -15,6 +15,20 @@ body {
   background-size: contain;
 }
 
+@media (min-width: 769px) and (max-width: 1440px) {
+  body {
+    background-size: auto 1200px;
+    background-position: 43% 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: auto 768px;
+    background-position: 50% -1%;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
