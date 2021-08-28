@@ -156,13 +156,14 @@ code {
 }
 
 .Section--Card {
+  padding-bottom: 90px;
   background-color: rgba(0, 0, 0, 0.5);
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1440px;
-  margin: 90px auto;
+  max-width: 1600px;
+  margin: 90px auto 0;
 }
 
 .Section__title {
@@ -171,25 +172,24 @@ code {
 }
 
 .ProjectCard {
-  max-width: 400px;
-  margin: 90px 0px;
-  padding: 30px;
-  color: inherit;
-  text-decoration: none;
-  text-align: left;
+  position: relative;
+  width: 400px;
+  height: 650px;
+  padding: 7px;
+  background-color: rgba(248, 170, 103, 0.8);
+  border-radius: 4%;
 }
 
-.ProjectCard:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(60deg, #ff7a18, #9E6F49 40%, #fff 65%);
-  -webkit-box-shadow: rgba(0, 0, 37, 0.15) 0px 2px 4px 0px, rgba(248, 170, 103, 0.52) 0px 2px 15px 0px;
-          box-shadow: rgba(0, 0, 37, 0.15) 0px 2px 4px 0px, rgba(248, 170, 103, 0.52) 0px 2px 15px 0px;
+.ProjectCard__side {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
 }
 
-.ProjectCard h1 {
-  text-align: center;
+.ProjectCard__back {
+  display: none;
 }
 
 .ProjectCard img {
   width: 100%;
+  border-radius: 6%;
 }
