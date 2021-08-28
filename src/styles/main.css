@@ -208,6 +208,12 @@ code {
   font-size: 80px;
 }
 
+@media screen and (max-width: 360px) {
+  .Section__title {
+    font-size: 40px;
+  }
+}
+
 .ProjectCard {
   position: relative;
   width: 400px;

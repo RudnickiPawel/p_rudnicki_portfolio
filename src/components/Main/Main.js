@@ -28,7 +28,7 @@ const Main = (props) => {
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
         />
       </Section>
-      <Section id='skills'>
+      {/* <Section id='skills'>
         <h1 className='Section__title'>Umiejętności</h1>
       </Section>
       <Section id='about'>
@@ -36,7 +36,7 @@ const Main = (props) => {
       </Section>
       <Section id='contact'>
         <h1 className='Section__title'>Kontakt</h1>
-      </Section>
+      </Section> */}
     </Fragment>
   );
 };
