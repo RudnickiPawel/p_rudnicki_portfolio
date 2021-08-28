@@ -1,5 +1,5 @@
-import '../../../styles/main.css';
-import placeholder from '../../../assets/placeholder600.png';
+import '../../../../styles/main.css';
+import placeholder from '../../../../assets/placeholder600.png';
 
 const ProjectCard = (props) => {
   return (

@@ -1,6 +1,8 @@
 html {
   max-width: 1920px;
   margin: 0 auto;
+  scroll-behavior: smooth;
+  height: 5000px;
 }
 
 body {
@@ -28,13 +30,15 @@ code {
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(0, 0, 0, 0.8);
+  max-width: 1920px;
   width: 100%;
   z-index: 100;
+  position: fixed;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .Header {
-    position: fixed;
+    top: 0;
   }
 }
 
@@ -106,26 +110,33 @@ code {
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
-  display: table;
-  height: 60px;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
 }
 
 @media (min-width: 769px) {
   .Menu {
+    display: table;
+    height: 60px;
     padding: 0;
+    overflow: hidden;
   }
 }
 
-.Menu div {
+.Menu a {
   padding: 3% 0;
   font-size: 30px;
   font-weight: 700;
 }
 
 @media (min-width: 769px) {
-  .Menu div {
+  .Menu a {
     font-size: 20px;
     padding: 0;
   }
@@ -144,6 +155,11 @@ code {
 
 .Menu__link:hover {
   color: #f8aa67;
+}
+
+.Menu a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .Section {

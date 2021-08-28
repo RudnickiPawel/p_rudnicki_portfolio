@@ -1,8 +1,10 @@
 .Header
   display: flex
   background-color: rgba(0, 0, 0, 0.8)
+  max-width: 1920px
   width: 100%
   z-index: 100
+  position: fixed
 
-  @media screen and ( max-width: 768px )
-    position: fixed
+  @media screen and ( min-width: 769px )
+    top: 0
