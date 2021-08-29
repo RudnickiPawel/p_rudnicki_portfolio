@@ -3,6 +3,7 @@ import Section from './Section/Section';
 import ProjectCard from './Section/ProjectCard/ProjectCard';
 import Arrow from './Arrow/Arrow';
 import '../../styles/main.css';
+import notebookImage from './../../assets/notebook.jpg' 
 
 //contains the code, so App.js doesnt have to
 const Main = (props) => {
@@ -33,10 +34,12 @@ const Main = (props) => {
         {/*styling for icon is in _Section.sass*/}
 
       </Section>
-      {/* <Section id='skills'>
+      <Section id='skills'>
         <h1 className='Section__title'>Umiejętności</h1>
+        <img className='Section__image' src={notebookImage} alt='' />
       </Section>
-      <Section id='about'>
+        
+      {/* <Section id='about'>
         <h1 className='Section__title'>O mnie</h1>
       </Section>
       <Section id='contact'>
