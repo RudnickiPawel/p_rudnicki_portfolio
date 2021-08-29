@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import Section from './Section/Section';
 import ProjectCard from './Section/ProjectCard/ProjectCard';
+import Arrow from './Arrow/Arrow';
+import '../../styles/main.css';
 
 //contains the code, so App.js doesnt have to
 const Main = (props) => {
@@ -27,6 +29,9 @@ const Main = (props) => {
           title='Fotograf'
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
         />
+        <Arrow targetId='#skills' version='white'/>
+        {/*styling for icon is in _Section.sass*/}
+
       </Section>
       {/* <Section id='skills'>
         <h1 className='Section__title'>Umiejętności</h1>

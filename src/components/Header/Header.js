@@ -1,7 +1,7 @@
 import '../../styles/main.css';
 import Hamburger from './Hamburger/Hamburger';
 import Menu from './Menu/Menu';
-import {  useState } from 'react';
+import { useState } from 'react';
 
 const Header = (props) => {
   const isScreenWide = window.innerWidth > 768;
