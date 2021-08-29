@@ -15,6 +15,7 @@
   flex-wrap: wrap;
   max-width: 1440px;
   margin: 90px auto 0;
+  border-radius: 3%;
 }
 @media screen and (max-width: 768px) {
   .Section--Card {

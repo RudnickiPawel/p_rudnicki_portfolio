@@ -1,26 +1,33 @@
 .Menu
   padding: 10% 0 5%
   max-width: 800px
-  margin: 0 auto
   width: 100%
   display: flex
   flex-direction: column
   color: white
   transition: all 0.5s ease
   align-items: center
+  justify-content: space-between
   background-color: rgba(0, 0, 0, 0.8)
+  position: fixed
+  z-index: 1
   @media ( min-width: 769px )
+    position: static
     background-color: transparent
-    display: table
-    height: 60px
     padding: 0
-    overflow: hidden
+    flex-direction: row
+    padding-right: 20px
+  @media screen and ( max-width: 1140px )
+    justify-content: space-around
+
   &__hidden
     opacity: 0
     pointer-events: none
 
-  a
-    padding: 3% 0
+  &__link
+    vertical-align: middle
+    cursor: pointer
+    padding: 30px 0
     font-size: 30px
     font-weight: 700
     text-decoration: none
@@ -28,13 +35,10 @@
     @media screen and ( max-width: 768px )
       width: fit-content
     @media ( min-width: 769px )
-      font-size: 20px
-      padding: 0
-      
-  &__link
-    vertical-align: middle
-    cursor: pointer
-    @media ( min-width: 769px )
       display: table-cell
+      font-size: 20px
+      // padding: 0
+    // @media screen and ( max-width: 1060px )
+
     &:hover
       color: rgba(248,170,103,255)    

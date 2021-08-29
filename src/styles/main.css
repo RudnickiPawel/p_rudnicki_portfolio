@@ -12,12 +12,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
   background-repeat: no-repeat;
-  background-size: auto 1300px;
+  background-size: 1920px auto;
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
   body {
-    background-size: auto 1200px;
+    background-size: auto 1227px;
     background-position: 43% 0%;
   }
 }
@@ -49,6 +49,73 @@ code {
   position: fixed;
 }
 
+@media screen and (max-width: 768px) {
+  .Header {
+    position: static;
+  }
+}
+
+.Header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) {
+  .Header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Header__container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+  }
+}
+
+.Header__logo {
+  padding: 20px 0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1140px) {
+  .Header__logo {
+    padding: 20px 0 0;
+    text-align: center;
+  }
+}
+
+.Header__logo span {
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 769px) {
   .Header {
     top: 0;
@@ -61,7 +128,9 @@ code {
   padding: 4px;
   height: 30px;
   width: 50px;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +191,6 @@ code {
 .Menu {
   padding: 10% 0 5%;
   max-width: 800px;
-  margin: 0 auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,16 +205,31 @@ code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1;
 }
 
 @media (min-width: 769px) {
   .Menu {
+    position: static;
     background-color: transparent;
-    display: table;
-    height: 60px;
     padding: 0;
-    overflow: hidden;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .Menu {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -155,8 +238,10 @@ code {
   pointer-events: none;
 }
 
-.Menu a {
-  padding: 3% 0;
+.Menu__link {
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 30px 0;
   font-size: 30px;
   font-weight: 700;
   text-decoration: none;
@@ -164,7 +249,7 @@ code {
 }
 
 @media screen and (max-width: 768px) {
-  .Menu a {
+  .Menu__link {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -172,20 +257,9 @@ code {
 }
 
 @media (min-width: 769px) {
-  .Menu a {
-    font-size: 20px;
-    padding: 0;
-  }
-}
-
-.Menu__link {
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-@media (min-width: 769px) {
   .Menu__link {
     display: table-cell;
+    font-size: 20px;
   }
 }
 
@@ -208,14 +282,15 @@ code {
 }
 
 .Section--Card {
-  padding-bottom: 90px;
+  padding-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.5);
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1440px;
-  margin: 90px auto 0;
+  margin: 200px auto 200px;
+  border-radius: 3%;
 }
 
 @media screen and (max-width: 768px) {
@@ -302,7 +377,6 @@ code {
 }
 
 .Arrow__container {
-  width: 10%;
   margin: 0 45%;
 }
 

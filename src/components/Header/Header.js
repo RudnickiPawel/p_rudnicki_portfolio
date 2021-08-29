@@ -12,8 +12,11 @@ const Header = (props) => {
   };
   return (
     <div className='Header'>
-      <Hamburger clicked={handleToggleMenu} isMenuOn={toggleMenu} />
-      {toggleMenu ? <Menu /> : <Menu className='Menu__hidden'/>}
+      <div className='Header__container'>
+        <div className='Header__logo'>PAWEŁ RUDNICKI<span>Front-end Developer</span></div>
+        <Hamburger clicked={handleToggleMenu} isMenuOn={toggleMenu} />
+        {toggleMenu ? <Menu /> : <Menu className='Menu__hidden' />}
+      </div>
     </div>
   );
 };
