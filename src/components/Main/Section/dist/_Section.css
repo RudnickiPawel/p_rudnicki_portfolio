@@ -1,0 +1,33 @@
+.Section {
+  display: flex;
+  margin: 90px;
+  color: #fff;
+  position: relative;
+}
+.Section a {
+  text-decoration: none;
+  color: inherit;
+}
+.Section--Card {
+  padding-bottom: 90px;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 90px auto 0;
+}
+@media screen and (max-width: 768px) {
+  .Section--Card {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
+.Section__title {
+  width: 100%;
+  font-size: 80px;
+}
+@media screen and (max-width: 360px) {
+  .Section__title {
+    font-size: 40px;
+  }
+}
