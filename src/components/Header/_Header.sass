@@ -21,6 +21,7 @@
       padding-bottom: 20px
       border-bottom: 1px solid white
       
+      
   &__logo
     padding: 20px 0
     color: #fff
@@ -28,12 +29,15 @@
     font-weight: 800
     display: flex
     text-align: left
-    // align-items: baseline
     flex-direction: column
     padding-left: 20px
     @media screen and ( max-width: 1140px )
       padding: 20px 0 0
       text-align: center
+    @media screen and ( max-width: 400px )
+      position: relative
+      left: 10%
+      text-align: left
 
     span
       width: 100%

@@ -8,7 +8,7 @@
     text-decoration: none
     color: inherit
 
-  &--Card
+  &--card
     flex-direction: row
     padding-bottom: 40px
     background-color: rgba(0, 0, 0, 0.5)
@@ -18,15 +18,24 @@
     margin: 200px auto 200px
     border-radius: 3%
     color: #fff
+    .Arrow__container
+      padding-top: 60px
     @media screen and ( max-width: 768px )
       margin-top: 0
       border-radius: 0
+      .Arrow__container
+        padding: 0
+  &--skills
+    .Section__background
+      // background-image: url('../../../assets/notebook.jpg')
 
   &__title
     width: 100%
-    font-size: 80px
-    @media screen and (max-width: 360px)
+    font-size: 60px
+    @media (min-width: 361px) and ( max-width: 768px )
       font-size: 40px
+    @media screen and (max-width: 360px)
+      font-size: 30px
 
   &__image
     width: 500px
