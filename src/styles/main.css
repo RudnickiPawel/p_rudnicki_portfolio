@@ -469,6 +469,32 @@ code {
   font-size: 25px;
 }
 
+.Section--about .Section__container {
+  overflow: hidden;
+}
+
+.Section--about .Section__item--flying {
+  position: relative;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.Section--about .Section__item1 {
+  left: 1000px;
+}
+
+.Section--about .Section__item2 {
+  left: -2500px;
+}
+
+.Section--about .Section__item3 {
+  left: 3700px;
+}
+
+.Section--about .Section__item4 {
+  left: -4800px;
+}
+
 .Section__title {
   width: 100%;
   font-size: 60px;

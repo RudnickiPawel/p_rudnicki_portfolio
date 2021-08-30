@@ -5,8 +5,22 @@ import Arrow from './Arrow/Arrow';
 import '../../styles/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faJs, faNpm, faReact, faGit, faNode, faSass } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from 'react';
 
 const Main = (props) => {
+  useEffect(() => {
+    let selectedFlyingText = '';
+    const watchingIt = document.getElementById('about').children[1];
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting === true) {
+        selectedFlyingText = Array.from(document.querySelectorAll('.Section__item--flying'));
+        selectedFlyingText.map(text => text.style.left = '0px');
+      }
+
+    }, { threshold: [1] });
+    observer.observe(watchingIt);
+  }, []);
+
   return (
     <Fragment>
       <Section id='projects' className='card'>
@@ -73,8 +87,14 @@ const Main = (props) => {
         </div>
         <Arrow targetId='#about' version='black' />
       </Section>
-      <Section id='about'>
+      <Section id='about' className='about'>
         <h1 className='Section__title'>O mnie</h1>
+        <div className='Section__container'>
+          <div className='Section__item--flying Section__item1'>Cześć</div>
+          <div className='Section__item--flying Section__item2'>Cześć</div>
+          <div className='Section__item--flying Section__item3'>Cześć</div>
+          <div className='Section__item--flying Section__item4'>Cześć</div>
+        </div>
       </Section>
       {/* <Section id='contact'>
         <h1 className='Section__title'>Kontakt</h1>
