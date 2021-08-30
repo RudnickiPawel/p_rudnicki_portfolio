@@ -29,7 +29,7 @@ const Main = (props) => {
           title='Fotograf'
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
         />
-        <Arrow targetId='#skills' version='white' />
+        <Arrow targetId='#skills' />
         {/*styling for this icon is in _Section.sass*/}
 
       </Section>
@@ -71,18 +71,16 @@ const Main = (props) => {
             </div>
           </div>
         </div>
+        <Arrow targetId='#about' version='black' />
       </Section>
-      {/* <Section id='about'>
+      <Section id='about'>
         <h1 className='Section__title'>O mnie</h1>
       </Section>
-      <Section id='contact'>
+      {/* <Section id='contact'>
         <h1 className='Section__title'>Kontakt</h1>
       </Section> */}
     </Fragment>
   );
 };
-//importing images differently to not have many imports ^ nvm, transitioned into fontawesome
-//will keep it commented here for future reference
-
 
 export default Main;

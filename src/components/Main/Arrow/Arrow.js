@@ -5,7 +5,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 const Arrow = (props) => {
   return (
     <a href={props.targetId} className='Arrow__container' >
-      <FontAwesomeIcon className={props.version === 'white' ? 'Arrow' : 'Arrow Arrow--black' } icon={faAngleDown} />
+      <FontAwesomeIcon className={props.version === undefined ? 'Arrow' : 'Arrow Arrow--black' } icon={faAngleDown} />
     </a>
   );
 };
