@@ -14,22 +14,25 @@ const Header = (props) => {
     setToggleMenu(prevToggleMenu => !prevToggleMenu);
   };
   const handleHamburgerColor = () => {
-    const hamburgerLinesList = document.getElementsByClassName('Hamburger')[0].childNodes;
-    window.addEventListener('scroll', () => {
-      const hamburgerLinesArray = Array.from(hamburgerLinesList);
-      if (window.pageYOffset > 1537)
-        hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
-      else
-        hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
-      if (window.innerWidth < 628) {
-        if (window.pageYOffset > 2161)
-          hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
-        else
-          hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
-      }
-      // adjust breakpoints later
-      // console.log('offset: ' + window.pageYOffset + ', width' + window.innerWidth);
-    });
+    if (window.innerWidth < 769 && document.getElementsByClassName('Hamburger-x')[0] === undefined) {
+      const hamburgerLinesList = document.getElementsByClassName('Hamburger')[0].childNodes;
+      window.addEventListener('scroll', () => {
+        const hamburgerLinesArray = Array.from(hamburgerLinesList);
+        if (window.innerWidth > 627) {
+          if (window.pageYOffset > 1537)
+            hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
+          else
+            hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
+        }
+        if (window.innerWidth <= 627) {
+          if (window.pageYOffset > 2161)
+            hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
+          else
+            hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
+        }
+        console.log('offset: ' + window.pageYOffset + ', width' + window.innerWidth);
+      });
+    }
   };
 
   return (

@@ -70,13 +70,8 @@ const Main = (props) => {
               <h3>sass</h3>
             </div>
           </div>
-          {/* <div className="Section__item">
-            <FontAwesomeIcon className='icon' icon={} />
-            <h3>react</h3>
-          </div> */}
         </div>
       </Section>
-
       {/* <Section id='about'>
         <h1 className='Section__title'>O mnie</h1>
       </Section>
