@@ -156,7 +156,7 @@ code {
 }
 
 .Hamburger:hover .Hamburger__line1, .Hamburger:hover .Hamburger__line2, .Hamburger:hover .Hamburger__line3 {
-  background-color: white;
+  background-color: #f8aa67;
 }
 
 @media screen and (max-width: 400px) {
@@ -171,6 +171,10 @@ code {
   .Hamburger {
     display: none;
   }
+}
+
+.Hamburger-x .Hamburger__line1, .Hamburger-x .Hamburger__line2, .Hamburger-x .Hamburger__line3 {
+  background-color: #fff !important;
 }
 
 .Hamburger-x .Hamburger__line1 {

@@ -14,17 +14,17 @@ const Header = (props) => {
     setToggleMenu(prevToggleMenu => !prevToggleMenu);
   };
   const handleHamburgerColor = () => {
-    if (window.innerWidth < 769 && document.getElementsByClassName('Hamburger-x')[0] === undefined) {
+    if (window.innerWidth < 769 ) {
       const hamburgerLinesList = document.getElementsByClassName('Hamburger')[0].childNodes;
       window.addEventListener('scroll', () => {
         const hamburgerLinesArray = Array.from(hamburgerLinesList);
-        if (window.innerWidth > 627) {
+        if (window.innerWidth > 627 && document.getElementsByClassName('Hamburger-x')[0] === undefined) {
           if (window.pageYOffset > 1537)
             hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
           else
             hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
         }
-        if (window.innerWidth <= 627) {
+        if (window.innerWidth <= 627 && document.getElementsByClassName('Hamburger-x')[0] === undefined) {
           if (window.pageYOffset > 2161)
             hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(0,0,0)');
           else
