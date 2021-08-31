@@ -1,6 +1,5 @@
 .Arrow
   //quite confusing sass structure, i know, but .Arrow is actually INSIDE .Arrow__container
-  //default color is white
   width: 100px !important //overwriting fontawesome default width
   height: 100px
   color: white
@@ -10,8 +9,7 @@
     color: rgba(248,170,103,255)
     animation: mover 0.4s infinite alternate
 
-  &__container
-    margin: 0 45%
+  &__container //arrow container styled in specific sections when needed
 
 @keyframes mover
   0%

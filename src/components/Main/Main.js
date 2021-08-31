@@ -14,7 +14,12 @@ const Main = (props) => {
     var observer = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting === true) {
         selectedFlyingText = Array.from(document.querySelectorAll('.Section__item--flying'));
-        selectedFlyingText.map(text => text.style.left = '0px');
+        selectedFlyingText.map(text => {
+          if(text.classList.contains('Section__item1'))
+            text.style.color = 'rgba(248,170,103,255)';
+          text.style.left = '0px'
+          return null
+        });
       }
 
     }, { threshold: [1] });
@@ -90,15 +95,14 @@ const Main = (props) => {
       <Section id='about' className='about'>
         <h1 className='Section__title'>O mnie</h1>
         <div className='Section__container'>
-          <div className='Section__item--flying Section__item1'>Cześć</div>
-          <div className='Section__item--flying Section__item2'>Cześć</div>
-          <div className='Section__item--flying Section__item3'>Cześć</div>
-          <div className='Section__item--flying Section__item4'>Cześć</div>
+          <div className='Section__item--flying Section__item1'>Cześć!</div>
+          <div className='Section__item--flying Section__item2'>jestem Paweł</div>
+          <div className='Section__item--flying Section__item3'>lubię koty, góry i pływanie</div>
+          <div className='Section__item--flying Section__item3'>uczę się z pomocą kursów na udemy oraz google</div>
+          <div className='Section__item--flying Section__item4'>Do zobaczenia!</div>
         </div>
+        <Arrow targetId='#contact' version='black' />
       </Section>
-      {/* <Section id='contact'>
-        <h1 className='Section__title'>Kontakt</h1>
-      </Section> */}
     </Fragment>
   );
 };

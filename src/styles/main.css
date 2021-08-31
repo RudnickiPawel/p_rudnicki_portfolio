@@ -294,7 +294,7 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 90px;
+  margin: -100px 90px 500px;
   color: #000;
   position: relative;
   -webkit-box-orient: vertical;
@@ -302,8 +302,6 @@ code {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 100px;
-  margin-top: -100px;
-  margin-bottom: 500px;
 }
 
 .Section a {
@@ -331,6 +329,7 @@ code {
 
 .Section--card .Arrow__container {
   padding-top: 60px;
+  margin: 0 45%;
 }
 
 @media screen and (max-width: 768px) {
@@ -469,18 +468,27 @@ code {
   font-size: 25px;
 }
 
+@media screen and (max-width: 530px) {
+  .Section--about {
+    margin: -100px 5% 500px;
+  }
+}
+
 .Section--about .Section__container {
   overflow: hidden;
 }
 
 .Section--about .Section__item--flying {
   position: relative;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: left 0.5s ease-out, color 2s ease-out;
+  transition: left 0.5s ease-out, color 2s ease-out;
+  margin: 30px 0;
+  font-size: 30px;
 }
 
 .Section--about .Section__item1 {
   left: 1000px;
+  font-weight: 600;
 }
 
 .Section--about .Section__item2 {
@@ -578,10 +586,6 @@ code {
           animation: mover 0.4s infinite alternate;
 }
 
-.Arrow__container {
-  margin: 0 45%;
-}
-
 @-webkit-keyframes mover {
   0% {
     -webkit-transform: translateY(0);
@@ -602,4 +606,45 @@ code {
     -webkit-transform: translateY(25px);
             transform: translateY(25px);
   }
+}
+
+.Footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 30px;
+}
+
+.Footer__title {
+  padding: 20px 0;
+}
+
+.Footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 285px;
+  margin: 0 auto;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.Footer__link {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.Footer__link:hover {
+  color: #f8aa67;
+  stroke: red;
+}
+
+.Footer__icon {
+  padding-right: 5px;
 }
