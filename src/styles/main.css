@@ -167,6 +167,12 @@ code {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .Hamburger {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
 @media (min-width: 1141px) {
   .Hamburger {
     display: none;
@@ -572,6 +578,9 @@ code {
 .ProjectCard img {
   width: 100%;
   border-radius: 6%;
+  height: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .Arrow {

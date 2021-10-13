@@ -1,11 +1,11 @@
 import '../../../../styles/main.css';
-import placeholder from '../../../../assets/placeholder600.png';
+// import placeholder from '../../../../assets/placeholder600.png';
 
 const ProjectCard = (props) => {
   return (
     <div className='ProjectCard'>
       <div className='ProjectCard__side ProjectCard__front'>
-        <img src={placeholder} alt="placeholder" />
+        <img src={props.img} alt='' />
         <h1>{props.title}</h1>
         <h2>{props.content}</h2>
       </div>

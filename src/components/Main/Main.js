@@ -6,6 +6,8 @@ import '../../styles/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faJs, faNpm, faReact, faGit, faNode, faSass } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from 'react';
+import kreatywnaIMG from '../../assets/kreatywnapizza.png';
+import photographyIMG from '../../assets/photographer-website.png';
 
 const Main = (props) => {
   useEffect(() => {
@@ -31,23 +33,25 @@ const Main = (props) => {
       <Section id='projects' className='card'>
         <h1 className='Section__title'>Projekty</h1>
         <ProjectCard
-          url='/1'
-          img='placeholder600.png'
-          title='Sklep internetowy'
-          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
+          url='/kreatywnapizza'
+          img={kreatywnaIMG}
+          title='KreatywnaPizza'
+          content='Sklep internetowy, za pomocą którego można zamówić pizze. Do wyboru jest ich liczba, rozmiar, a nawet składniki!'
+          techs={['react', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'fortawesome', 'react-select', 'google-map', 'sass', 'firebase']}
         />
         <ProjectCard
-          url='/2'
-          img='placeholder600.png'
-          title='Forum'
-          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
+          url='/photography'
+          img={photographyIMG}
+          title='Portfolio Fotografa'
+          content='Strona portfolio fotografa. Zdjęcia są podzielone na różne kategorie i wyświetlone w formie tak zwanej karuzeli.'
+          techs={['react', 'fortawesome', 'react-responsive-carousel', '']}
         />
-        <ProjectCard
+        {/* <ProjectCard
           url='/3'
           img='placeholder600.png'
           title='Fotograf'
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
-        />
+        /> */}
         <Arrow targetId='#skills' />
         {/*styling for this icon is in _Section.sass*/}
 
@@ -97,8 +101,8 @@ const Main = (props) => {
         <div className='Section__container'>
           <div className='Section__item--flying Section__item1'>Cześć!</div>
           <div className='Section__item--flying Section__item2'>jestem Paweł</div>
-          <div className='Section__item--flying Section__item3'>lubię koty, góry i pływanie</div>
-          <div className='Section__item--flying Section__item3'>uczę się z pomocą kursów na udemy oraz google</div>
+          <div className='Section__item--flying Section__item3'>nauczony z internetowych źródeł</div>
+          <div className='Section__item--flying Section__item3'>teraz skupiam się na React, Redux i Next</div>
           <div className='Section__item--flying Section__item4'>Do zobaczenia!</div>
         </div>
         <Arrow targetId='#contact' version='black' />
