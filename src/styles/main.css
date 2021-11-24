@@ -597,36 +597,18 @@ code {
   color: white;
 }
 
+.Arrow:hover {
+  -webkit-box-shadow: 1px 1px 7px 5px white;
+          box-shadow: 1px 1px 7px 5px white;
+}
+
 .Arrow--black {
   color: black;
 }
 
-.Arrow:hover {
-  color: #f8aa67;
-  -webkit-animation: mover 0.4s infinite alternate;
-          animation: mover 0.4s infinite alternate;
-}
-
-@-webkit-keyframes mover {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
-  }
-}
-
-@keyframes mover {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
-  }
+.Arrow--black:hover {
+  -webkit-box-shadow: 1px 1px 7px 5px black;
+          box-shadow: 1px 1px 7px 5px black;
 }
 
 .Footer {
@@ -652,6 +634,7 @@ code {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  padding-bottom: 20px;
 }
 
 .Footer__link {

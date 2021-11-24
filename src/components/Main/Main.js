@@ -38,6 +38,7 @@ const Main = (props) => {
           title='KreatywnaPizza'
           content='Sklep internetowy, za pomocą którego można zamówić pizze. Do wyboru jest ich liczba, rozmiar, a nawet składniki!'
           techs={['react', 'npm', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'updating nested state', 'fontawesome', 'react-select', 'google-map', 'sass', 'firebase', 'hamburger color changes']}
+          github='https://github.com/RudnickiPawel/kreatywna_pizza'
         />
         <ProjectCard
           url='/photography'
@@ -45,15 +46,10 @@ const Main = (props) => {
           title='Portfolio Fotografa'
           content='Strona portfolio fotografa. Zdjęcia są podzielone na różne kategorie i wyświetlone w formie tak zwanej karuzeli.'
           techs={['react', 'npm', 'react-responsive-carousel', 'many images import', 'fontawesome', 'google fonts', 'sass']}
+          github='https://github.com/RudnickiPawel/photographer-website'
         />
-        {/* <ProjectCard
-          url='/3'
-          img='placeholder600.png'
-          title='Fotograf'
-          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sagittis sapien varius interdum. Nulla sodales turpis vel diam.'
-        /> */}
         <Arrow targetId='#skills' />
-        {/*styling for this icon is in _Section.sass*/}
+        {/*styling of this icon is in _Section.sass*/}
 
       </Section>
       <Section id='skills' className='skills'>
