@@ -1,5 +1,4 @@
 import '../../../../styles/main.css';
-// import placeholder from '../../../../assets/placeholder600.png';
 
 const ProjectCard = (props) => {
   return (
@@ -10,7 +9,10 @@ const ProjectCard = (props) => {
         <h2>{props.content}</h2>
       </div>
       <a href={props.url} className='ProjectCard__side ProjectCard__back'>
-        <p>This is back</p>
+        <h1>Użyto:</h1>
+        {props.techs.map((tech, index) => 
+        <p key={index}>{tech}</p>
+        )}
       </a>
     </div>
   );

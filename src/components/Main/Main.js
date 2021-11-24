@@ -37,14 +37,14 @@ const Main = (props) => {
           img={kreatywnaIMG}
           title='KreatywnaPizza'
           content='Sklep internetowy, za pomocą którego można zamówić pizze. Do wyboru jest ich liczba, rozmiar, a nawet składniki!'
-          techs={['react', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'fortawesome', 'react-select', 'google-map', 'sass', 'firebase']}
+          techs={['react', 'npm', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'updating nested state', 'fontawesome', 'react-select', 'google-map', 'sass', 'firebase', 'hamburger color changes']}
         />
         <ProjectCard
           url='/photography'
           img={photographyIMG}
           title='Portfolio Fotografa'
           content='Strona portfolio fotografa. Zdjęcia są podzielone na różne kategorie i wyświetlone w formie tak zwanej karuzeli.'
-          techs={['react', 'fortawesome', 'react-responsive-carousel', '']}
+          techs={['react', 'npm', 'react-responsive-carousel', 'many images import', 'fontawesome', 'google fonts', 'sass']}
         />
         {/* <ProjectCard
           url='/3'

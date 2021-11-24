@@ -62,9 +62,15 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1420px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .Header__container {
+    margin: 0 20px;
+  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -100,7 +106,6 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 20px;
 }
 
 @media screen and (max-width: 1140px) {
@@ -254,7 +259,6 @@ code {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-right: 20px;
   }
 }
 
@@ -573,6 +577,10 @@ code {
           backface-visibility: hidden;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.ProjectCard__back h1 {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .ProjectCard img {
