@@ -1,5 +1,4 @@
 html {
-  max-width: 1920px;
   margin: 0 auto;
   scroll-behavior: smooth;
   height: 5000px;
@@ -12,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
   background-repeat: no-repeat;
-  background-size: 1920px auto;
+  background-size: 100% auto;
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
@@ -43,7 +42,6 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1920px;
   width: 100%;
   z-index: 100;
   position: fixed;
@@ -318,11 +316,6 @@ code {
   padding-top: 100px;
 }
 
-.Section a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .Section--card {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -536,12 +529,7 @@ code {
 
 .ProjectCard {
   position: relative;
-  width: 300px;
-  height: 550px;
-  padding: 7px;
-  margin-bottom: 60px;
-  background-color: rgba(248, 170, 103, 0.8);
-  border-radius: 4%;
+  color: black;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: all 0.5s ease;
@@ -553,16 +541,28 @@ code {
           transform: rotateY(180deg);
 }
 
+.ProjectCard__wrapper {
+  background-color: white;
+  width: 600px;
+}
+
 .ProjectCard__side {
-  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 6%;
+  text-decoration: none;
+  color: black;
 }
 
 .ProjectCard__front {
-  width: 100%;
+  width: 80%;
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  margin: 0 auto;
+}
+
+.ProjectCard__front h2 {
+  text-align: left;
+  font-size: 18px;
 }
 
 .ProjectCard__back {
@@ -575,18 +575,47 @@ code {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  font-weight: 600;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
 .ProjectCard__back h1 {
-  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #f8aa67;
+}
+
+.ProjectCard__btns-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.ProjectCard__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  color: black;
+  background-color: #f8aa67;
+  width: 100px;
+  border: 1px solid black;
+  margin-right: 3%;
+}
+
+.ProjectCard__button:hover {
+  background-color: white;
 }
 
 .ProjectCard img {
-  width: 100%;
-  border-radius: 6%;
-  height: 40%;
+  width: calc(100% - 12px);
+  border: 6px solid #f8aa67;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
