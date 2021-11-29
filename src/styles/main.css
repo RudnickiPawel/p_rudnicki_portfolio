@@ -23,8 +23,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-size: auto 768px;
-    background-position: 50% -1%;
+    background: none;
   }
 }
 
@@ -45,11 +44,18 @@ code {
   width: 100%;
   z-index: 100;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 768px) {
   .Header {
     position: static;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .Header {
+    top: 0;
   }
 }
 
@@ -125,13 +131,6 @@ code {
   width: 100%;
   font-weight: 600;
   font-size: 20px;
-}
-
-@media screen and (min-width: 769px) {
-  .Header {
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
 }
 
 .Hamburger {
@@ -322,16 +321,36 @@ code {
       -ms-flex-direction: row;
           flex-direction: row;
   padding-bottom: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1440px;
   margin: 200px auto 500px;
-  border-radius: 3%;
   color: #fff;
   padding: 0;
+}
+
+@media (min-width: 1141px) and (max-width: 1440px) {
+  .Section--card {
+    margin: 71px auto 500px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1140px) {
+  .Section--card {
+    margin: 81px auto 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Section--card {
+    margin-top: 0;
+  }
+  .Section--card .Arrow__container {
+    padding: 0;
+  }
 }
 
 .Section--card .Arrow__container {
@@ -339,57 +358,15 @@ code {
   margin: 0 45%;
 }
 
-@media screen and (max-width: 768px) {
-  .Section--card {
-    margin-top: 0;
-    border-radius: 0;
-  }
-  .Section--card .Arrow__container {
-    padding: 0;
-  }
+.Section--skills {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 768px) {
   .Section--skills {
-    background-image: url("../assets/paper.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    margin: 0 0 500px 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Section--skills {
-    background-size: 800px auto;
-  }
-}
-
-.Section--skills .Section__background {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-image: url("../assets/notebook.jpg");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 1440px;
-}
-
-@media (min-width: 769px) and (max-width: 1660px) {
-  .Section--skills .Section__background {
-    background-size: contain;
-    background-position: 0 0;
-    height: 87vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Section--skills .Section__background {
-    background-image: none;
-    height: auto;
+    margin: 0;
   }
 }
 
@@ -399,21 +376,9 @@ code {
   display: flex;
   width: 100%;
   max-width: 1440px;
-  margin-top: 400px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media (min-width: 769px) and (max-width: 1660px) {
-  .Section--skills .Section__container {
-    margin-top: 25vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Section--skills .Section__container {
-    margin: 60px 0;
-  }
+  margin-bottom: 60px;
 }
 
 .Section--skills .Section__container::after {
@@ -432,7 +397,7 @@ code {
   padding: 20px 0;
 }
 
-@media (min-width: 371px) and (max-width: 450px) {
+@media (min-width: 510px) and (max-width: 630px) {
   .Section--skills .Section__item {
     -webkit-box-flex: 33%;
         -ms-flex: 33%;
@@ -440,21 +405,11 @@ code {
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 510px) {
   .Section--skills .Section__item {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;
-  }
-}
-
-.Section--skills .Section__title {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .Section--skills .Section__title {
-    margin-top: 115px;
   }
 }
 
@@ -475,6 +430,12 @@ code {
   font-size: 25px;
 }
 
+@media screen and (max-width: 511px) {
+  .Section--skills h3 {
+    font-size: 17px;
+  }
+}
+
 @media screen and (max-width: 530px) {
   .Section--about {
     margin: -100px 5% 500px;
@@ -491,6 +452,12 @@ code {
   transition: left 0.5s ease-out, color 2s ease-out;
   margin: 30px 0;
   font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .Section--about .Section__item--flying {
+    font-size: 20px;
+  }
 }
 
 .Section--about .Section__item1 {
@@ -601,20 +568,20 @@ code {
           justify-content: center;
   text-decoration: none;
   font-size: 28px;
+  font-weight: 600;
   color: black;
-  background-color: #f8aa67;
   width: 100px;
-  border: 1px solid black;
+  border: 3px solid black;
   margin-right: 3%;
 }
 
 .ProjectCard__button:hover {
-  background-color: white;
+  background-color: #f8aa67;
 }
 
 .ProjectCard img {
   width: calc(100% - 12px);
-  border: 6px solid #f8aa67;
+  border: 6px solid black;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;

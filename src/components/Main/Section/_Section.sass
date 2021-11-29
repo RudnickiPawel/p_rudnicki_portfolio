@@ -6,65 +6,39 @@
   flex-direction: column
   padding-top: 100px //fix for anchor targeting (-100px margin-top too)
 
-  // a
-    // text-decoration: none
-    // color: inherit
-
   &--card
     flex-direction: row
     padding-bottom: 40px
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.8)
     justify-content: space-around
     flex-wrap: wrap
     max-width: 1440px
     margin: 200px auto 500px
-    border-radius: 3%
     color: #fff
     padding: 0
+    @media (min-width: 1141px) and ( max-width: 1440px )
+      margin: 71px auto 500px
+    @media (min-width: 769px ) and (max-width: 1140px)
+      margin: 81px auto 500px
+    @media screen and ( max-width: 768px )
+      margin-top: 0
+      .Arrow__container
+        padding: 0
     .Arrow__container
       padding-top: 60px
       margin: 0 45%
-    @media screen and ( max-width: 768px )
-      margin-top: 0
-      border-radius: 0
-      .Arrow__container
-        padding: 0
 
   &--skills
+    align-items: center
     @media screen and ( max-width: 768px )
-      background-image: url('../assets/paper.jpg')
-      background-repeat: no-repeat
-      background-position: 50% 0
-      margin: 0 0 500px 0 
-    @media screen and ( max-width: 768px )
-      background-size: 800px auto
-
-    .Section__background
-      display: flex
-      justify-content: center
-      background-image: url('../assets/notebook.jpg')
-      background-size: auto 100%
-      background-repeat: no-repeat
-      background-position: 50% 50%
-      height: 1440px
-      @media (min-width: 769px) and ( max-width: 1660px )
-        background-size: contain
-        background-position: 0 0
-        height: 87vw
-      @media screen and ( max-width: 768px )
-        background-image: none
-        height: auto
+      margin: 0
 
     .Section__container
       display: flex
       width: 100%
       max-width: 1440px
-      margin-top: 400px
       flex-wrap: wrap
-      @media (min-width: 769px) and ( max-width: 1660px )
-        margin-top: 25vw
-      @media screen and ( max-width: 768px )
-        margin: 60px 0
+      margin-bottom: 60px
 
       &::after
         content: ""
@@ -74,15 +48,10 @@
     .Section__item
       flex: 25%
       padding: 20px 0
-      @media ( min-width: 371px ) and ( max-width: 450px )
+      @media (min-width: 510px) and ( max-width: 630px )
         flex: 33%
-      @media screen and ( max-width: 370px )
+      @media screen and ( max-width: 510px )
         flex: 50%
-
-    .Section__title
-      margin-bottom: 0
-      @media screen and ( max-width: 768px )
-        margin-top: 115px
 
     .icon
       width: 100px
@@ -93,11 +62,13 @@
     h3
       margin: 0
       font-size: 25px
+      @media screen and ( max-width: 511px )
+        font-size: 17px
 
   &--about
     @media screen and ( max-width: 530px )
       margin: -100px 5% 500px
-      
+
     .Section__container
       overflow: hidden
     .Section__item
@@ -106,6 +77,9 @@
         transition: left 0.5s ease-out, color 2s ease-out
         margin: 30px 0
         font-size: 30px
+        @media screen and ( max-width: 768px )
+          font-size: 20px
+
       &1
         left: 1000px
         font-weight: 600
