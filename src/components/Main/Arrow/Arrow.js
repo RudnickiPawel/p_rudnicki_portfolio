@@ -1,11 +1,14 @@
 import '../../../styles/main.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { ReactComponent as SvgArrow } from '../../../assets/down-arrow-svgrepo-com.svg';
 
 const Arrow = (props) => {
   return (
-    <a href={props.targetId} className='Arrow__container' >
-      <FontAwesomeIcon className={props.version === undefined ? 'Arrow' : 'Arrow Arrow--black' } icon={faAngleDown} />
+    props.version === 'black' ? <a href={props.targetId} className="Arrow Arrow__black">
+      <SvgArrow className="Arrow__arrow Arrow__first Arrow__next" />
+      <SvgArrow className="Arrow__arrow Arrow__second Arrow__next" />
+    </a> : <a href={props.targetId} className="Arrow">
+      <SvgArrow className="Arrow__arrow Arrow__first Arrow__next" />
+      <SvgArrow className="Arrow__arrow Arrow__second Arrow__next" />
     </a>
   );
 };

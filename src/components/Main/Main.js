@@ -37,7 +37,7 @@ const Main = (props) => {
           img={kreatywnaIMG}
           title='KreatywnaPizza'
           content='Sklep internetowy, za pomocą którego można zamówić pizze. Do wyboru jest ich liczba, rozmiar, a nawet składniki!'
-          techs={['react', 'npm', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'updating nested state', 'fontawesome', 'react-select', 'google-map', 'sass', 'firebase', 'hamburger color changes']}
+          techs={['react', 'npm', 'useState', 'useEffect', 'prop drilling', 'error boundary', 'updating nested state', 'fontawesome', 'react-select', 'google-map', 'sass', 'firebase']}
           github='https://github.com/RudnickiPawel/kreatywna_pizza'
         />
         <ProjectCard

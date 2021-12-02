@@ -1,7 +1,6 @@
 html {
   margin: 0 auto;
   scroll-behavior: smooth;
-  height: 5000px;
 }
 
 body {
@@ -12,6 +11,13 @@ body {
   background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+
+@media screen and (min-width: 2400px) {
+  body {
+    background-size: 2400px auto;
+    background-position: 50% 0;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
@@ -320,7 +326,6 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.8);
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -348,14 +353,6 @@ code {
   .Section--card {
     margin-top: 0;
   }
-  .Section--card .Arrow__container {
-    padding: 0;
-  }
-}
-
-.Section--card .Arrow__container {
-  padding-top: 60px;
-  margin: 0 45%;
 }
 
 .Section--skills {
@@ -511,6 +508,7 @@ code {
 .ProjectCard__wrapper {
   background-color: white;
   width: 600px;
+  margin-bottom: 50px;
 }
 
 .ProjectCard__side {
@@ -549,6 +547,7 @@ code {
 
 .ProjectCard__back h1 {
   border-bottom: 3px solid #f8aa67;
+  margin-top: 0;
 }
 
 .ProjectCard__btns-wrapper {
@@ -588,23 +587,105 @@ code {
 }
 
 .Arrow {
-  width: 100px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  position: relative;
   height: 100px;
-  color: white;
+  margin-bottom: 20px;
 }
 
-.Arrow:hover {
-  -webkit-box-shadow: 1px 1px 7px 5px white;
-          box-shadow: 1px 1px 7px 5px white;
+.Arrow__arrow {
+  position: absolute;
 }
 
-.Arrow--black {
-  color: black;
+.Arrow__first {
+  width: 100px;
+  height: 100px;
+  top: -3px;
 }
 
-.Arrow--black:hover {
-  -webkit-box-shadow: 1px 1px 7px 5px black;
-          box-shadow: 1px 1px 7px 5px black;
+.Arrow__second {
+  width: 70px;
+  height: 70px;
+  bottom: -5px;
+}
+
+.Arrow__next {
+  fill: #fff;
+}
+
+.Arrow__black {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.Arrow__black .Arrow__arrow {
+  fill: #000;
+}
+
+@-webkit-keyframes movingArrows {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  26% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  55% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes movingArrows {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  26% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  55% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.Arrow:hover .Arrow__arrow {
+  -webkit-animation-name: movingArrows;
+          animation-name: movingArrows;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .Footer {
