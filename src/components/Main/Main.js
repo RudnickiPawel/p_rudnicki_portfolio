@@ -8,6 +8,7 @@ import { faHtml5, faCss3, faJs, faNpm, faReact, faGit, faNode, faSass } from "@f
 import { useEffect } from 'react';
 import kreatywnaIMG from '../../assets/kreatywnapizza.png';
 import photographyIMG from '../../assets/photographer-website.png';
+import thisPage from '../../assets/front-portfolio.png';
 
 const Main = (props) => {
   useEffect(() => {
@@ -32,6 +33,14 @@ const Main = (props) => {
     <Fragment>
       <Section id='projects' className='card'>
         <h1 className='Section__title'>Projekty</h1>
+        <ProjectCard
+          url='/'
+          img={thisPage}
+          title='Portfolio Frontend Developera'
+          content='Moja strona portfolio, na której umieszczam wykonane projekty i poznane dotychczas technologie.'
+          techs={['react', 'npm', 'useEffect', 'fontawesome', 'sass', 'aos']}
+          github='https://github.com/RudnickiPawel/p_rudnicki_portfolio'
+        />
         <ProjectCard
           url='/kreatywnapizza'
           img={kreatywnaIMG}
