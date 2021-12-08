@@ -30,7 +30,6 @@ const Header = (props) => {
           else
             hamburgerLinesArray.map(line => line.style.backgroundColor = 'rgb(255,255,255)');
         }
-        console.log('offset: ' + window.pageYOffset + ', width' + window.innerWidth);
       });
     }
   };
