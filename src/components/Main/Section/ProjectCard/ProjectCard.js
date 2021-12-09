@@ -2,7 +2,7 @@ import '../../../../styles/main.css';
 
 const ProjectCard = (props) => {
   return (
-    <div className='ProjectCard__wrapper'>
+    <div data-aos='fade-up' className='ProjectCard__wrapper'>
       <div className='ProjectCard'>
         <div className='ProjectCard__side ProjectCard__front'>
           <h1>{props.title}</h1>
