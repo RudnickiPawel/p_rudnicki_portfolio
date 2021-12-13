@@ -61,29 +61,37 @@
         font-size: 17px
 
   &--about
+    max-width: 740px
     @media screen and ( max-width: 530px )
       margin: -100px 5% 500px
 
     .Section__container
       overflow: hidden
+      &--about
+        text-align: left
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .Section__item
+          margin: 5px 0
     .Section__item
-      &--flying
-        position: relative
-        transition: left 0.5s ease-out, color 2s ease-out
-        margin: 30px 0
-        font-size: 30px
-        @media screen and ( max-width: 768px )
-          font-size: 20px
+      position: relative
+      transition: left 0.5s ease-out, color 2s ease-out
+      margin: 30px 0
+      font-size: 20px
+      @media screen and ( max-width: 768px )
+        font-size: 15px
 
-      &1
-        left: 1000px
-        font-weight: 600
-      &2
-        left: -2500px
-      &3
-        left: 3700px
-      &4
-        left: -4800px
+      // &1
+      //   left: 1000px
+      //   font-weight: 600
+      // &2
+      //   left: -2500px
+      // &3
+      //   left: 3700px
+      // &4
+      //   left: -4800px
 
   &__title
     width: 100%

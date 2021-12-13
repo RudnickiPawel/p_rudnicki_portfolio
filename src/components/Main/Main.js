@@ -102,11 +102,17 @@ const Main = (props) => {
       <Section id='about' className='about'>
         <h1 className='Section__title'>O mnie</h1>
         <div className='Section__container'>
-          <div className='Section__item--flying Section__item1'>Cześć!</div>
-          <div className='Section__item--flying Section__item2'>jestem Paweł</div>
-          <div className='Section__item--flying Section__item3'>nauczony z internetowych źródeł</div>
-          <div className='Section__item--flying Section__item3'>teraz skupiam się na React, Redux i Next</div>
-          <div className='Section__item--flying Section__item4'>Do zobaczenia!</div>
+          <div className='Section__item'>Interesuję się web developmentem, chcę być zawsze na czasie, ale też uczę się starszych technologii, które nadal są bardzo popularne przy pracy z React.</div>
+          <div className='Section__item'>W tym momecie uczę się Redux, Next.js i TypeScript oraz interesuję się NestJS, Gatsby i React 18.</div>
+          <div className='Section__item'>Tworząc aplikacje skupiam się na:</div>
+          <ol className='Section__container--about'>
+            <li className='Section__item'>responsywności(RWD, mobile first)</li>
+            <li className='Section__item'>czytelności kodu(BEM methodology)</li>
+            <li className='Section__item'>szybkości pisania kodu(components, emmet)</li>
+            <li className='Section__item'>działaniu w różnych przeglądarkach(browser coverage)</li>
+            <li className='Section__item'>optymalizacji dla wyszukiwarek(SEO)</li>
+          </ol>
+          <div className='Section__item'>i innych</div>
         </div>
         <Arrow targetId='#contact' version='black' />
       </Section>

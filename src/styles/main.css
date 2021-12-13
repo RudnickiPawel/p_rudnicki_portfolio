@@ -453,6 +453,10 @@ code {
   }
 }
 
+.Section--about {
+  max-width: 740px;
+}
+
 @media screen and (max-width: 530px) {
   .Section--about {
     margin: -100px 5% 500px;
@@ -463,35 +467,39 @@ code {
   overflow: hidden;
 }
 
-.Section--about .Section__item--flying {
+.Section--about .Section__container--about {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Section--about .Section__container--about .Section__item {
+  margin: 5px 0;
+}
+
+.Section--about .Section__item {
   position: relative;
   -webkit-transition: left 0.5s ease-out, color 2s ease-out;
   transition: left 0.5s ease-out, color 2s ease-out;
   margin: 30px 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  .Section--about .Section__item--flying {
-    font-size: 20px;
+  .Section--about .Section__item {
+    font-size: 15px;
   }
-}
-
-.Section--about .Section__item1 {
-  left: 1000px;
-  font-weight: 600;
-}
-
-.Section--about .Section__item2 {
-  left: -2500px;
-}
-
-.Section--about .Section__item3 {
-  left: 3700px;
-}
-
-.Section--about .Section__item4 {
-  left: -4800px;
 }
 
 .Section__title {
