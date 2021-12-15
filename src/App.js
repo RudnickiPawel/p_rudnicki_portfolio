@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 function App() {
   useEffect(() => {
     Aos.init({
-      duration: 500,
+      duration: 750,
       disable: window.innerWidth < 769
     });
   }, []);

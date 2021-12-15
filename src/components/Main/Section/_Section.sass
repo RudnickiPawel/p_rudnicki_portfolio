@@ -61,18 +61,18 @@
         font-size: 17px
 
   &--about
+    text-align: left
     max-width: 740px
+    margin-left: auto
+    margin-right: auto
     @media screen and ( max-width: 530px )
       margin: -100px 5% 500px
 
     .Section__container
       overflow: hidden
       &--about
-        text-align: left
         display: flex
         flex-direction: column
-        justify-content: center
-        align-items: center
         .Section__item
           margin: 5px 0
     .Section__item
@@ -82,16 +82,8 @@
       font-size: 20px
       @media screen and ( max-width: 768px )
         font-size: 15px
-
-      // &1
-      //   left: 1000px
-      //   font-weight: 600
-      // &2
-      //   left: -2500px
-      // &3
-      //   left: 3700px
-      // &4
-      //   left: -4800px
+    .Section__title
+      text-align: center
 
   &__title
     width: 100%
@@ -100,3 +92,6 @@
       font-size: 30px
     @media screen and (max-width: 360px)
       font-size: 20px
+
+  .--nomargin
+      margin: 0

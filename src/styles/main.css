@@ -454,7 +454,10 @@ code {
 }
 
 .Section--about {
+  text-align: left;
   max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 530px) {
@@ -468,7 +471,6 @@ code {
 }
 
 .Section--about .Section__container--about {
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,12 +478,6 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .Section--about .Section__container--about .Section__item {
@@ -502,6 +498,10 @@ code {
   }
 }
 
+.Section--about .Section__title {
+  text-align: center;
+}
+
 .Section__title {
   width: 100%;
   font-size: 40px;
@@ -517,6 +517,10 @@ code {
   .Section__title {
     font-size: 20px;
   }
+}
+
+.Section .--nomargin {
+  margin: 0;
 }
 
 .ProjectCard {

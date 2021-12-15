@@ -8,7 +8,7 @@ const Footer = (props) => {
   return (
     <div id='contact' className='Footer'>
       <div className="Footer__title">Kontakt</div>
-      <div className="Footer__container">
+      <div data-aos="zoom-in" className="Footer__container">
         <a className='Footer__link' href="mailto:rudnicki.pawel94@gmail.com">
           <FontAwesomeIcon className='Footer__icon' icon={faEnvelope} />
           rudnicki.pawel94@gmail.com
