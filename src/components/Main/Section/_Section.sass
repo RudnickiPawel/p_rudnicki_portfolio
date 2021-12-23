@@ -39,6 +39,8 @@ $forLight: rgba(248,170,103,255), black
     align-items: center
     @media screen and ( max-width: 768px )
       margin: 0
+    .Arrow
+      margin-top: 0
 
     .Section__container
       display: flex
@@ -53,12 +55,16 @@ $forLight: rgba(248,170,103,255), black
 
     .Section__item
       flex: 25%
-      padding-bottom: 20px
+      padding: 20px 0
       @media (min-width: 510px) and ( max-width: 630px )
         flex: 33%
       @media screen and ( max-width: 510px )
         flex: 50%
-
+      &:first-of-type
+        padding-bottom: 50px
+        @media screen and ( max-width: 630px )
+          padding-bottom: 20px
+          
     .icon
       width: 50px
       height: 50px

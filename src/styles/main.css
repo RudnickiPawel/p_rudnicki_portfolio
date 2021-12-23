@@ -373,6 +373,10 @@ code {
   }
 }
 
+.Section--skills .Arrow {
+  margin-top: 0;
+}
+
 .Section--skills .Section__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,7 +400,7 @@ code {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 @media (min-width: 510px) and (max-width: 630px) {
@@ -412,6 +416,16 @@ code {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;
+  }
+}
+
+.Section--skills .Section__item:first-of-type {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 630px) {
+  .Section--skills .Section__item:first-of-type {
+    padding-bottom: 20px;
   }
 }
 
