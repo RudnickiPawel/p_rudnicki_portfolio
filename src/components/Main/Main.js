@@ -13,7 +13,11 @@ const Main = (props) => {
   return (
     <Fragment>
       <Section id='projects' className='card'>
-        <h1 className='Section__title'>Projekty</h1>
+        <div className="Section__container">
+          <div className="Section__title-wrapper">
+            <h1 className='Section__title'>Projekty</h1>
+          </div>
+        </div>
         <ProjectCard
           url='/'
           img={thisPage}
@@ -43,7 +47,9 @@ const Main = (props) => {
 
       </Section>
       <Section id='skills' className='skills'>
-        <h1 className='Section__title'>Umiejętności</h1>
+        <div className="Section__title-wrapper Section__title-wrapper--bg-dark">
+          <h1 className='Section__title'>Umiejętności</h1>
+        </div>
         <div className="Section__container">
           <div data-aos="zoom-in" className="Section__item">
             <FontAwesomeIcon className='icon' icon={faHtml5} />
@@ -55,7 +61,7 @@ const Main = (props) => {
           </div>
           <div data-aos="zoom-in" className="Section__item">
             <FontAwesomeIcon className='icon' icon={faJs} />
-            <h3>javascript <br /> es6</h3>
+            <h3>javascript es6</h3>
           </div>
           <div data-aos="zoom-in" className="Section__item">
             <FontAwesomeIcon className='icon' icon={faNpm} />
@@ -78,15 +84,17 @@ const Main = (props) => {
             <h3>sass</h3>
           </div>
         </div>
-        <Arrow targetId='#about' version='black' />
+        <Arrow targetId='#about' />
       </Section>
       <Section id='about' className='about'>
-        <h1 className='Section__title'>O mnie</h1>
+        <div className="Section__title-wrapper Section__title-wrapper--bg-dark">
+          <h1 className='Section__title'>O mnie</h1>
+        </div>
         <div className='Section__container'>
           <div className='Section__item' data-aos="zoom-in">Interesuję się web developmentem. Chcę być zawsze na czasie, ale też uczę się starszych technologii, które nadal są bardzo popularne przy pracy z React.</div>
           <div className='Section__item' data-aos="zoom-in">W tym momecie uczę się Redux, Next.js i TypeScript oraz interesuję się NestJS, Gatsby i React 18.</div>
           <div className='Section__item --nomargin' data-aos="zoom-in">Tworząc aplikacje skupiam się na:</div>
-          <ul className='Section__container--about --nomargin' style={{'list-style-type': 'none'}} data-aos="zoom-in">
+          <ul className='Section__container--about --nomargin' style={{ 'list-style-type': 'none' }} data-aos="zoom-in">
             <li className='Section__item'>responsywności(RWD, mobile first)</li>
             <li className='Section__item'>czytelności kodu(BEM methodology)</li>
             <li className='Section__item'>szybkości pisania kodu(components, emmet)</li>
@@ -94,7 +102,7 @@ const Main = (props) => {
             <li className='Section__item'>optymalizacji dla wyszukiwarek(SEO)</li>
           </ul>
         </div>
-        <Arrow targetId='#contact' version='black' />
+        <Arrow targetId='#contact' />
       </Section>
     </Fragment>
   );

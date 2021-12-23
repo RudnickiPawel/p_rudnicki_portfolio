@@ -8,29 +8,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../assets/yehleen-gaffney-ZUY4OT_lMgs-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
-@media screen and (min-width: 1700px) {
-  body {
-    background-size: 1700px auto;
-    background-position: 50% 0;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1440px) {
-  body {
-    background-size: auto 1227px;
-    background-position: 43% 0%;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    background: none;
-  }
 }
 
 code {
@@ -375,6 +352,15 @@ code {
   }
 }
 
+.Section--card .Section__container {
+  width: 100%;
+}
+
+.Section--card .Arrow {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 .Section--skills {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -395,7 +381,6 @@ code {
   max-width: 1440px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 60px;
 }
 
 .Section--skills .Section__container::after {
@@ -411,7 +396,7 @@ code {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 510px) and (max-width: 630px) {
@@ -435,7 +420,7 @@ code {
   height: 50px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
   .Section--skills .icon {
     width: 30px;
     height: 30px;
@@ -447,7 +432,7 @@ code {
   font-size: 25px;
 }
 
-@media screen and (max-width: 511px) {
+@media screen and (max-width: 768px) {
   .Section--skills h3 {
     font-size: 17px;
   }
@@ -481,14 +466,14 @@ code {
 }
 
 .Section--about .Section__container--about .Section__item {
-  margin: 5px 0;
+  margin-bottom: 5px;
 }
 
 .Section--about .Section__item {
   position: relative;
   -webkit-transition: left 0.5s ease-out, color 2s ease-out;
   transition: left 0.5s ease-out, color 2s ease-out;
-  margin: 30px 0;
+  margin-bottom: 30px;
   font-size: 20px;
 }
 
@@ -503,7 +488,7 @@ code {
 }
 
 .Section__title {
-  width: 100%;
+  margin: 0 auto;
   font-size: 40px;
 }
 
@@ -517,6 +502,29 @@ code {
   .Section__title {
     font-size: 20px;
   }
+}
+
+.Section__title-wrapper {
+  padding: 20px 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, right top, from(#f8aa67), to(white));
+  background: linear-gradient(to right, #f8aa67, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.Section__title-wrapper--bg-dark {
+  background: -webkit-gradient(linear, left top, right top, from(#f8aa67), to(black));
+  background: linear-gradient(to right, #f8aa67, black);
+  -webkit-background-clip: text;
 }
 
 .Section .--nomargin {
@@ -549,6 +557,12 @@ code {
   background-color: white;
   width: 300px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 899px) {
+  .ProjectCard__wrapper:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .ProjectCard__side {
@@ -642,7 +656,9 @@ code {
       flex-basis: 100%;
   position: relative;
   height: 100px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .Arrow__arrow {
@@ -662,18 +678,7 @@ code {
 }
 
 .Arrow__next {
-  fill: #fff;
-}
-
-.Arrow__black {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  width: 100%;
-  margin-bottom: auto;
-}
-
-.Arrow__black .Arrow__arrow {
-  fill: #000;
+  fill: #f8aa67;
 }
 
 @-webkit-keyframes movingArrows {
@@ -737,10 +742,6 @@ code {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-size: 30px;
-}
-
-.Footer__title {
-  padding: 20px 0;
 }
 
 .Footer__container {

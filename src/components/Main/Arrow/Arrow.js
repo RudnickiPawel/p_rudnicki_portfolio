@@ -3,10 +3,7 @@ import { ReactComponent as SvgArrow } from '../../../assets/down-arrow-svgrepo-c
 
 const Arrow = (props) => {
   return (
-    props.version === 'black' ? <a data-aos='zoom-in' href={props.targetId} className="Arrow Arrow__black">
-      <SvgArrow className="Arrow__arrow Arrow__first Arrow__next" />
-      <SvgArrow className="Arrow__arrow Arrow__second Arrow__next" />
-    </a> : <a data-aos='zoom-in' href={props.targetId} className="Arrow">
+    <a href={props.targetId} className="Arrow">
       <SvgArrow className="Arrow__arrow Arrow__first Arrow__next" />
       <SvgArrow className="Arrow__arrow Arrow__second Arrow__next" />
     </a>

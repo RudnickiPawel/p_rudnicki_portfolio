@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
-
 const Footer = (props) => {
   return (
     <div id='contact' className='Footer'>
-      <div className="Footer__title">Kontakt</div>
+      <div className="Section__title-wrapper">
+        <div className="Section__title">Kontakt</div>
+      </div>
       <div data-aos="zoom-in" className="Footer__container">
         <a className='Footer__link' href="mailto:rudnicki.pawel94@gmail.com">
           <FontAwesomeIcon className='Footer__icon' icon={faEnvelope} />
@@ -22,8 +23,6 @@ const Footer = (props) => {
           GitHub
         </a>
       </div>
-
-
     </div>
   );
 };

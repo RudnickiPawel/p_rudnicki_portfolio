@@ -14,7 +14,7 @@ const Header = (props) => {
   return (
     <div data-aos="fade-down" className='Header'>
       <div className='Header__container'>
-        <div className='Header__logo'>PAWEŁ RUDNICKI<span>Front-end Developer</span></div>
+        <div className='Header__logo'><div>PAWEŁ RUDNICKI</div><span>Front-end Developer</span></div>
         <Hamburger clicked={handleToggleMenu} isMenuOn={toggleMenu} />
         {toggleMenu ? <Menu /> : <Menu className='Menu__hidden' />}
       </div>
