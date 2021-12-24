@@ -14,7 +14,7 @@ const Header = (props) => {
   return (
     <div className='Header'>
       <div className='Header__container'>
-        <div data-aos="fade-down" className='Header__logo'>
+        <div className='Header__logo'>
           <div className='Section__title-wrapper'>
             <div>PAWEŁ RUDNICKI</div>
           </div>
