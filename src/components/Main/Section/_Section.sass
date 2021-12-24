@@ -64,7 +64,7 @@ $forLight: rgba(248,170,103,255), black
         padding-bottom: 50px
         @media screen and ( max-width: 630px )
           padding-bottom: 20px
-          
+
     .icon
       width: 50px
       height: 50px
@@ -82,7 +82,7 @@ $forLight: rgba(248,170,103,255), black
     max-width: 740px
     margin-left: auto
     margin-right: auto
-    @media screen and ( max-width: 530px )
+    @media screen and ( max-width: 768px )
       margin: -100px 5% 500px
 
     .Section__container
@@ -90,8 +90,21 @@ $forLight: rgba(248,170,103,255), black
       &--about
         display: flex
         flex-direction: column
+        padding-left: 0
+        margin-left: 0
+        list-style: none
         .Section__item
+          padding-left: 1em
+          text-indent: -1em
           margin-bottom: 5px
+          &:before
+            content: ">"
+            font-weight: 700
+            font-size: 30px
+            color: rgba(248,170,103,255)
+            text-shadow: 2px 2px 4px #000000
+            padding-right: 5px
+
     .Section__item
       position: relative
       transition: left 0.5s ease-out, color 2s ease-out
@@ -127,3 +140,5 @@ $forLight: rgba(248,170,103,255), black
 
   .--nomargin
     margin: 0
+.--bold
+  font-weight: bold

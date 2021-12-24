@@ -94,12 +94,12 @@ const Main = (props) => {
           <div className='Section__item' data-aos="zoom-in">Interesuję się web developmentem. Chcę być zawsze na czasie, ale też uczę się starszych technologii, które nadal są bardzo popularne przy pracy z React.</div>
           <div className='Section__item' data-aos="zoom-in">W tym momecie uczę się Redux, Next.js i TypeScript oraz interesuję się NestJS, Gatsby i React 18.</div>
           <div className='Section__item --nomargin' data-aos="zoom-in">Tworząc aplikacje skupiam się na:</div>
-          <ul className='Section__container--about --nomargin' style={{ 'list-style-type': 'none' }} data-aos="zoom-in">
-            <li className='Section__item'>responsywności(RWD, mobile first)</li>
-            <li className='Section__item'>czytelności kodu(BEM methodology)</li>
-            <li className='Section__item'>szybkości pisania kodu(components, emmet)</li>
-            <li className='Section__item'>działaniu w różnych przeglądarkach(browser coverage)</li>
-            <li className='Section__item'>optymalizacji dla wyszukiwarek(SEO)</li>
+          <ul className='Section__container--about --nomargin' data-aos="zoom-in">
+            <li className='Section__item'>responsywności(<span className="--bold">RWD, mobile first</span>)</li>
+            <li className='Section__item'>czytelności kodu(<span className="--bold">BEM methodology</span>)</li>
+            <li className='Section__item'>szybkości pisania kodu(<span className="--bold">components, emmet</span>)</li>
+            <li className='Section__item'>działaniu w różnych przeglądarkach(<span className="--bold">browser coverage</span>)</li>
+            <li className='Section__item'>optymalizacji dla wyszukiwarek(<span className="--bold">SEO</span>)</li>
           </ul>
         </div>
         <Arrow targetId='#contact' />
